@@ -1,0 +1,13 @@
+{
+  "name": "math-worksheet-platform",
+  "version": "1.0.0",
+  "description": "Interactive and Print-Ready Mathematics Platform for Grade 10 Fundamental Counting Principles",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "inject:css": "node ./scripts/inject-css.js",
+    "build": "npm run build:css && npm run inject:css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}
