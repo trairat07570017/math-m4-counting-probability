@@ -5,7 +5,7 @@ Status: Accepted
 ## Context
 When accessing the math worksheet platform on mobile devices—particularly iOS (iPhone, iPad Safari/WebKit)—users experienced severe lag, scroll stutter, and main thread freezing. Investigation revealed three primary bottlenecks:
 1. `cdn.tailwindcss.com` Play CDN JIT runtime was parsing a massive 6,600+ line DOM with tens of thousands of classes on every page load via client-side JavaScript.
-2. KaTeX's `renderMathInElement(document.body)` was synchronously parsing all 198 problems across all 10 chapters simultaneously at startup, creating tens of thousands of complex DOM nodes.
+2. KaTeX's `renderMathInElement(document.body)` was synchronously parsing all 206 problems across all 10 chapters simultaneously at startup, creating tens of thousands of complex DOM nodes.
 3. GPU overload on mobile screens caused by `backdrop-blur-md` on the sticky navigation bar during continuous vertical scrolling.
 
 ## Decision

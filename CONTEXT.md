@@ -112,6 +112,22 @@ _Avoid_: Uniformity rule, identical object rule
 The probability that event $E$ does not occur, given by $P(E') = 1 - P(E)$, frequently applied to "at least one" problems to bypass complex direct multi-case summation.
 _Avoid_: Inverse probability, opposite probability
 
+**Addition Law of Probability (กฎการบวกของความน่าจะเป็น)**:
+The formula determining the probability of the union of two events: $P(A \cup B) = P(A) + P(B) - P(A \cap B)$, which models scenarios involving "or" (หรือ) conditions and Venn diagram partitions.
+_Avoid_: Union rule, or-probability
+
+**Mutually Exclusive Events (เหตุการณ์ที่ไม่เกิดร่วมกัน)**:
+Two events $A$ and $B$ that cannot occur simultaneously, meaning $A \cap B = \emptyset$ and $P(A \cap B) = 0$, simplifying the addition law to $P(A \cup B) = P(A) + P(B)$.
+_Avoid_: Disjoint actions, separate cases
+
+**Sampling With and Without Replacement (การสุ่มแบบใส่คืนและไม่ใส่คืน)**:
+Sequential multi-stage random sampling where either the drawn object is returned to the population before subsequent draws (keeping population cardinality constant) or kept out (decreasing population cardinality by 1 on each subsequent draw and altering subsequent conditional outcome counts).
+_Avoid_: Return sampling, draw-and-drop
+
+**Quality Control Modeling (การตรวจสอบคุณภาพและชิ้นงานชำรุด)**:
+A real-world probability application where batches of manufactured items containing defective and non-defective units are sampled to calculate the probability of detecting defects (often solved via the complement rule: $1 - P(\text{no defect})$).
+_Avoid_: Defect counting, factory test
+
 ### Assessment & Exam Architecture
 
 **Practice Test Paper (แนวข้อสอบ / แบบทดสอบประเมินผลสัมฤทธิ์)**:
